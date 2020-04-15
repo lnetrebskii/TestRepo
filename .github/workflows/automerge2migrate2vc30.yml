@@ -20,22 +20,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2  
 
-    - name: Sync Merge
-      uses: robotology/gh-action-nightly-merge@v1.2.0
-      env:
-        GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-      with:
-        # Name of the stable branch
-        stable_branch: dev-3.0.0
-        # Name of the development branch
-        development_branch: feature/migrate-to-vc30
-        # Allow fast forward merge
-        allow_ff: false # optional
-        # Refuse to perform a non fast forward merge (requires allow_ff=true)
-        ff_only: false 
-        # Allow action to run on forks
-        allow_forks: false # optional
-        # User name for git commits
-        user_name: "Merge to feature/migrate-to-vc30"
+      # Runs a set of commands using the runners shell
+    - name: Run a multi-line script
+      run: |
+        git checkout dev-3.0.0
+        git pull
+
+        git checkout feature/migrate-to-vc30
+        git pull
+        git merge dev-3.0.0
+        git push
