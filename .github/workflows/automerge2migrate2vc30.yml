@@ -28,9 +28,9 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       with:
         # Name of the stable branch
-        stable_branch: "dev-3.0.0"
+        stable_branch: dev-3.0.0
         # Name of the development branch
-        development_branch: "feature/migrate-to-vc30"
+        development_branch: feature/migrate-to-vc30
         # Allow fast forward merge
         allow_ff: false # optional
         # Refuse to perform a non fast forward merge (requires allow_ff=true)
