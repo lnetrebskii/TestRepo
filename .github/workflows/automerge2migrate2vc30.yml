@@ -38,4 +38,4 @@ jobs:
         # User name for git commits
         user_name: Merge to feature/migrate-to-vc30
         # Environment variable containing the token to use for push
-        push_token: GITHUB_TOKEN
+        push_token: ${{ secrets.GITHUB_TOKEN }}
