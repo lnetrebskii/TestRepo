@@ -28,7 +28,7 @@ jobs:
         git config --global user.name "Sync to migrate-to-vc30 action"
         git config --global user.email "sync2migratetovc30@virtoway.com"
 
-        git fetch origin feature/migrate-to-vc30
+        git fetch
         git checkout feature/migrate-to-vc30
         git pull
         git merge dev-3.0.0
