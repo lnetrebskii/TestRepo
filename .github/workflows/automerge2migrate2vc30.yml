@@ -24,6 +24,8 @@ jobs:
 
     - name: Sync Merge
       uses: robotology/gh-action-nightly-merge@v1.2.0
+      env:
+        GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
       with:
         # Name of the stable branch
         stable_branch: "dev-3.0.0"
@@ -37,5 +39,3 @@ jobs:
         allow_forks: false # optional
         # User name for git commits
         user_name: "Merge to feature/migrate-to-vc30"
-        # Environment variable containing the token to use for push
-        push_token: '${{ secrets.GITHUB_TOKEN }}'
