@@ -25,10 +25,12 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        git checkout dev-3.0.0
+        git getch origin dev-3.0.0
+        git checkout dev-3.0.0 origin/dev-3.0.0
         git pull
 
-        git checkout feature/migrate-to-vc30
+        git fetch origin feature/migrate-to-vc30
+        git checkout feature/migrate-to-vc30 origin/feature/migrate-to-vc30
         git pull
         git merge dev-3.0.0
         git push
