@@ -25,6 +25,9 @@ jobs:
       # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
+        git config --global user.name "Sync to feature/migrate-to-vc30 action"
+        git config --global user.email "sync2migratetovc30@example.com"
+        
         git fetch origin dev-3.0.0
         git checkout dev-3.0.0
         git pull
