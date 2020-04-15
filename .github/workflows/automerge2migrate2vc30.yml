@@ -32,5 +32,5 @@ jobs:
         git fetch origin feature/migrate-to-vc30
         git checkout feature/migrate-to-vc30
         git pull
-        git merge dev-3.0.0
+        git merge dev-3.0.0 --allow-unrelated-histories
         git push
