@@ -36,4 +36,6 @@ jobs:
         # Allow action to run on forks
         allow_forks: false # optional
         # User name for git commits
-        user_name: Merge to feature/migrate-to-vc30 
+        user_name: Merge to feature/migrate-to-vc30
+        # Environment variable containing the token to use for push
+        push_token: GITHUB_TOKEN
