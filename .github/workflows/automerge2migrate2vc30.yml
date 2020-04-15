@@ -26,9 +26,9 @@ jobs:
       uses: robotology/gh-action-nightly-merge@v1.2.0
       with:
         # Name of the stable branch
-        stable_branch: dev-3.0.0
+        stable_branch: "dev-3.0.0"
         # Name of the development branch
-        development_branch: feature/migrate-to-vc30
+        development_branch: "feature/migrate-to-vc30"
         # Allow fast forward merge
         allow_ff: false # optional
         # Refuse to perform a non fast forward merge (requires allow_ff=true)
@@ -36,6 +36,6 @@ jobs:
         # Allow action to run on forks
         allow_forks: false # optional
         # User name for git commits
-        user_name: Merge to feature/migrate-to-vc30
+        user_name: "Merge to feature/migrate-to-vc30"
         # Environment variable containing the token to use for push
         push_token: ${{ secrets.GITHUB_TOKEN }}
