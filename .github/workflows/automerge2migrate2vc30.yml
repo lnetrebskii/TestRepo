@@ -32,4 +32,4 @@ jobs:
         git fetch
         git checkout feature/migrate-to-vc30
         git pull
-        git merge dev-3.0.0
+        git merge feature/automerge-to-vc30
